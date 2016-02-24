@@ -8,8 +8,6 @@ module.exports =  {
     path.join(ROOT_PATH, 'index.js')
   ],
 
-  context: __dirname,
-
   output: {
     path: ROOT_PATH,
     filename: 'bundle.js'
@@ -23,8 +21,14 @@ module.exports =  {
     loaders: [
       {
         test: /\.jsx?$/,
-        loaders: ['babel'],
-        include: path.join(ROOT_PATH)
+        loader: 'babel',
+        include: path.join(ROOT_PATH),
+        query: {
+          presets: [
+            require.resolve('babel-preset-es2015'),
+            require.resolve('babel-preset-react')
+          ]
+        }
       }
     ]
   }
