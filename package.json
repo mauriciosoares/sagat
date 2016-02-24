@@ -1,0 +1,29 @@
+{
+  "name": "arrange",
+  "version": "0.0.1",
+  "description": "The ultimate builder for your front end projects",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mauriciosoares/arrange.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "builder",
+    "front",
+    "end"
+  ],
+  "author": "Mauricio Soares",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.3",
+    "babel-preset-es2015": "^6.5.0",
+    "commander": "^2.9.0",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
