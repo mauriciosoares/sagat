@@ -2,15 +2,19 @@ const webpack = require('webpack');
 const path = require('path');
 
 const ROOT_PATH = process.cwd();
+const config = require(path.join(ROOT_PATH, 'package.json'));
+
+// console.log(ROOT_PATH);
+// console.log(config.arrange.entry);
 
 module.exports =  {
   entry: [
-    path.join(ROOT_PATH, 'index.js')
+    path.join(ROOT_PATH, config.arrange.entry)
   ],
 
   output: {
-    path: ROOT_PATH,
-    filename: 'bundle.js'
+    path: path.join(ROOT_PATH, config.arrange.output.path),
+    filename: config.arrange.output.filename
   },
 
   resolveLoader: {
