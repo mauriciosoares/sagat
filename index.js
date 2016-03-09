@@ -12,7 +12,16 @@
 
 // if(program.watch) console.log('watching');
 const webpack = require('webpack');
-const WebpackDevServer = require('webpack-dev-server');
+// const WebpackDevServer = require('webpack-dev-server');
 const config = require('./webpack.config');
 
-new WebpackDevServer(webpack(config)).listen(8080, 'localhost');
+var compiler = webpack(config);
+
+compiler.watch({
+  aggregateTimeout: 300,
+  poll: true
+}, function(err, stats) {
+  console.log(':D');
+});
+
+// new WebpackDevServer(webpack(config)).listen(8080, 'localhost');
