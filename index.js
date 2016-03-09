@@ -13,14 +13,18 @@
 // if(program.watch) console.log('watching');
 const webpack = require('webpack');
 // const WebpackDevServer = require('webpack-dev-server');
-const config = require('./webpack.config');
+const getWebpackConfig = require('./lib/webpack');
 
-var compiler = webpack(config);
+var compiler = webpack(getWebpackConfig());
 
 compiler.watch({
   aggregateTimeout: 300,
   poll: true
 }, function(err, stats) {
+  if(err) {
+    console.log('error!');
+    return;
+  }
   console.log(':D');
 });
 
