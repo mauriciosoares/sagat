@@ -13,7 +13,7 @@
 // if(program.watch) console.log('watching');
 const webpack = require('webpack');
 // const WebpackDevServer = require('webpack-dev-server');
-const getWebpackConfig = require('./lib/webpack');
+const getWebpackConfig = require('../lib/webpack');
 
 var compiler = webpack(getWebpackConfig());
 
