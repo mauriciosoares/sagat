@@ -1,11 +1,11 @@
 {
-  "name": "arrange",
+  "name": "kane",
   "version": "0.0.1",
   "description": "The ultimate builder for your front end projects",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mauriciosoares/arrange.git"
+    "url": "https://github.com/mauriciosoares/kane.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
