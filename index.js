@@ -13,10 +13,7 @@ compiler.watch({
   errorDetails: true
 }, function(err, stats) {
   if(err) {
-    console.log('error!');
-    return;
+    throw new Error(err);
   }
-
-  console.log(stats.hasErrors());
-  console.log(':D');
+  console.log(stats.toString({colors: true}));
 });
