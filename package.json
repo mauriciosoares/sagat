@@ -1,7 +1,7 @@
 {
   "name": "kane",
   "version": "0.0.1",
-  "description": "The ultimate builder for your front end projects",
+  "description": "The builder for your front end stuff",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -13,7 +13,8 @@
   "keywords": [
     "builder",
     "front",
-    "end"
+    "end",
+    "kane"
   ],
   "author": "Mauricio Soares",
   "license": "MIT",
