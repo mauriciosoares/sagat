@@ -2,7 +2,7 @@
 
 const webpack = require('webpack');
 const getWebpackConfig = require('./lib/webpack');
-var ProgressPlugin = require('webpack/lib/ProgressPlugin');
+const util = require('util');
 
 
 var compiler = webpack(getWebpackConfig());
@@ -15,5 +15,8 @@ compiler.watch({
   if(err) {
     throw new Error(err);
   }
-  console.log(stats.toString({colors: true}));
+
+  if(stats.hasErrors()) {
+    util.log(stats.toString({colors: true}));
+  }
 });

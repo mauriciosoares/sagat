@@ -24,6 +24,7 @@
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-react": "^6.5.0",
     "commander": "^2.9.0",
+    "progress-bar-webpack-plugin": "^1.5.0",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   }
