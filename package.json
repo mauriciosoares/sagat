@@ -16,6 +16,9 @@
     "end",
     "kane"
   ],
+  "bin": {
+    "kane": "./index.js"
+  },
   "author": "Mauricio Soares",
   "license": "MIT",
   "dependencies": {
