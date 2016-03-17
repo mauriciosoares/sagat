@@ -1,6 +1,6 @@
 {
   "name": "kane",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The builder for your front end stuff",
   "main": "index.js",
   "repository": {
