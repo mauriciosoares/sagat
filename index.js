@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 
+require('./lib/tiger-uppercut')();
 const webpack = require('webpack');
 const getWebpackConfig = require('./lib/webpack');
 const util = require('util');
-
-
 var compiler = webpack(getWebpackConfig());
 
 compiler.watch({
