@@ -1,11 +1,11 @@
 {
-  "name": "kane",
+  "name": "sagat",
   "version": "0.0.4",
-  "description": "The builder for your front end stuff",
+  "description": "Tiger Uppercut your build process!",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mauriciosoares/kane.git"
+    "url": "https://github.com/mauriciosoares/sagat.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,10 +14,10 @@
     "builder",
     "front",
     "end",
-    "kane"
+    "sagat"
   ],
   "bin": {
-    "kane": "./index.js"
+    "sagat": "./index.js"
   },
   "author": "Mauricio Soares",
   "license": "MIT",
