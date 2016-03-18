@@ -1,6 +1,6 @@
 {
   "name": "sagat",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Tiger Uppercut your build process!",
   "main": "index.js",
   "repository": {
