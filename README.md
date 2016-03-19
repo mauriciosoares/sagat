@@ -116,6 +116,9 @@ This is not (yet) a production ready builder, but it's handy when you want to wo
 
 ## TODO
 
+- [ ] add a test build process
+- [ ] add a linting build process
+- [ ] add a production build process
 - [ ] support multiple entries and outputs
 - [ ] support direct css entry (multiple as well)
 
