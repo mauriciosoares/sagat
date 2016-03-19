@@ -89,6 +89,10 @@ The `tests` property is used to change the default extension test in webpack con
 
 Now it'll test for `.scss` files instead of `css`.
 
+## Using
+
+Just run `sagat` inside your project folder, a watcher will look for any changes on your files.
+
 ## Final Thoughts
 
 With all this configuration you'll be able to do something like this:
