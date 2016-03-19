@@ -116,8 +116,8 @@ This is not (yet) a production ready builder, but it's handy when you want to wo
 
 ## TODO
 
-- [] support multiple entries and outputs
-- [] support direct css entry (multiple as well)
+- [ ] support multiple entries and outputs
+- [ ] support direct css entry (multiple as well)
 
 ## License
 
