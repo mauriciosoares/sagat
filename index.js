@@ -1,16 +1,34 @@
 #!/usr/bin/env node
 
-require('./lib/tiger-uppercut')();
+const program = require('commander');
 const webpack = require('webpack');
 const getWebpackConfig = require('./lib/webpack');
 const util = require('util');
-var compiler = webpack(getWebpackConfig());
+const compiler = webpack(getWebpackConfig());
+const config = require('./lib/config');
+const pkg = config.getSagatPackage();
 
-compiler.watch({
-  aggregateTimeout: 300,
-  poll: true,
-  errorDetails: true
-}, function(err, stats) {
+program.version(pkg.version)
+  .option('-w --watch', 'Watch for file changes')
+  .option('-b --build', 'Build your files')
+  .parse(process.argv);
+
+if(program.watch) watch();
+if(program.build) build();
+
+function build() {
+  compiler.run(parseCompiler);
+}
+
+function watch() {
+  compiler.watch({
+    aggregateTimeout: 300,
+    poll: true,
+    errorDetails: true
+  }, parseCompiler);
+}
+
+function parseCompiler(err, stats) {
   if(err) {
     throw new Error(err);
   }
@@ -18,4 +36,4 @@ compiler.watch({
   if(stats.hasErrors()) {
     util.log(stats.toString({colors: true}));
   }
-});
+}
