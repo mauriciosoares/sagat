@@ -111,11 +111,11 @@ Sagat has a list of commands you can use:
 
 ## Docs
 
-#### entry <string>: the path for your entry point file.
+#### entry (string): the path for your entry point file.
 
 ex: `"entry": "src/index.js"`
 
-#### output <hash>: configuration for your output file.
+#### output (hash): configuration for your output file.
 
 ex:
 
@@ -126,7 +126,7 @@ ex:
 }
 ```
 
-#### loaders <array>: An array of loaders configuration.
+#### loaders (array): An array of loaders configuration.
 
 ex:
 
