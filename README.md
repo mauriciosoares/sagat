@@ -4,7 +4,7 @@ Configure your build process in 1 minute and start coding!
 
 ## Idea
 
-All developers spent at least 30min - 1h in the build configuration of a new project. `sagat` is here to speed up this configuration, with some keys on your `package.json` file you can start coding in no time.
+All developers spend at least 30min - 1h in the build configuration of a new project. `sagat` is here to speed up this configuration, with some keys on your `package.json` file you can start coding in no time.
 
 `sagat` uses [Webpack](https://webpack.github.io/) under the hood.
 
@@ -109,6 +109,38 @@ Sagat has a list of commands you can use:
 
 `sagat -h --help`: list all available commands
 
+## Docs
+
+#### entry <string>: the path for your entry point file.
+
+ex: `"entry": "src/index.js"`
+
+#### output <hash>: configuration for your output file.
+
+ex:
+
+```
+"output": {
+  "path": "bundle",
+  "filename": "bundle.js"
+}
+```
+
+#### loaders <array>: An array of loaders configuration.
+
+ex:
+
+```
+"loaders": ["style": {
+  "test": "sass",
+  "loaders": ["sass"]
+},
+"javascript": {
+  "test": "jsx?"
+}]
+```
+
+
 ## Final Thoughts
 
 With all this configuration you'll be able to do something like this:
@@ -117,7 +149,7 @@ With all this configuration you'll be able to do something like this:
 // src/index.js
 
 import React from 'react';
-import 'index.scss';
+import 'index.sass';
 
 class Root extends React.Component {
   render() {
