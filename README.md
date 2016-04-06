@@ -1,12 +1,12 @@
 # Sagat
 
-Tired of having to configure all the webpack/grunt/gulp/wathever task runner in your project?
+Configure your build process in 2 minutes and start coding!
 
-`Sagat` is here to make your life (and build process) way easier. Just `install` it on your project and start coding!
+## Idea
 
-`Sagat` uses webpack under the hood.
+All developers spent at least 30min - 1h in the build configuration of a new project. `sagat` is here to speed up this configuration, with some keys on your `package.json` file you can start coding in no time.
 
-Tiger uppercut!
+`sagat` uses [Webpack](https://webpack.github.io/) under the hood.
 
 ## Instalation
 
@@ -35,11 +35,13 @@ To have your build process ready to go, you just need to add 2 properties to you
 
 These configuration are mandatory for `sagat` to work.
 
-With this simple config you'll be able to use full `common.js` enviroment on your project.
+With this simple config you'll be able to use a full `common.js` enviroment on your project. Also you can require `css` files on your `js` files (thanks Webpack!).
 
 ## Custom Configuration
 
-As we all know, ES6 is a thing, and pre/pos css processors are the stuff! You can easily add any babel presets or custom modules for your js/css builds.
+As we all know, ES6/7 is a thing, and pre/pos css processors are the stuff!
+
+You can easily add any babel presets or custom modules for your js/css builds.
 
 ### Babel Presets
 
@@ -58,23 +60,27 @@ After that you'll have to install these preset`s locally on your project:
 npm i babel-preset-es2015 babel-preset-react --save-dev
 ```
 
-You're good to go!
+Now you're good to go!
 
-### CSS webpack loaders
+### Loaders
 
-You can also add custom loaders your css configuration:
+You can configure any loader on your project using the configuration inside `package.json`,
+
+#### CSS webpack loaders
+
+For using CSS loaders, you should configure something like this:
 
 ```
 // package.json
 ...
 "sagat": {
   ...
-  "loaders": {
-    "style": ["sass"]
-  },
-  "tests": {
-    "style": "scss"
-  }
+  "loaders": [{
+    "style": {
+      "test": "sass",
+      "loaders": ["sass"]
+    }
+  }]
 }
 ...
 ```
@@ -87,11 +93,21 @@ npm i sass-loader node-sass --save-dev
 
 The `tests` property is used to change the default extension test in webpack configuration.
 
-Now it'll test for `.scss` files instead of `css`.
+Now it'll test for `.sass` files instead of `.css`.
+
+#### JS webpack loaders
+
+Similar to CSS loaders, you can configure it on the `package.json` as well, just change the key `style` to `javascript` and use any loader you want.
 
 ## Using
 
-Just run `sagat` inside your project folder, a watcher will look for any changes on your files.
+Sagat has a list of commands you can use:
+
+`sagat -w --watch`: starts the build in watch mode
+
+`sagat -b --build`: build your project once
+
+`sagat -h --help`: list all available commands
 
 ## Final Thoughts
 
@@ -121,6 +137,7 @@ This is not (yet) a production ready builder, but it's handy when you want to wo
 - [ ] add a production build process
 - [ ] support multiple entries and outputs
 - [ ] support direct css entry (multiple as well)
+- [ ] custom module directories
 
 ## License
 
