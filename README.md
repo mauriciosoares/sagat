@@ -1,6 +1,6 @@
 # Sagat
 
-Configure your build process in 2 minutes and start coding!
+Configure your build process in 1 minute and start coding!
 
 ## Idea
 
