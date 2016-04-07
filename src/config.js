@@ -22,10 +22,10 @@ export function getLoaderConfig(loader) {
 
   if(!targetConfig.loaders) return;
 
-  const l = targetConfig.loaders.find((l) => l[loader]);
+  const l = targetConfig.loaders[loader];
   if(!l) return;
 
-  const {test, loaders} = l[loader];
+  const {test, loaders} = l;
 
   return {
     test: test || null,

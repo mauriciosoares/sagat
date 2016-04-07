@@ -75,12 +75,12 @@ For using CSS loaders, you should configure something like this:
 ...
 "sagat": {
   ...
-  "loaders": [{
+  "loaders": {
     "style": {
       "test": "sass",
       "loaders": ["sass"]
     }
-  }]
+  }
 }
 ...
 ```
@@ -131,13 +131,15 @@ ex:
 ex:
 
 ```
-"loaders": ["style": {
-  "test": "sass",
-  "loaders": ["sass"]
-},
-"javascript": {
-  "test": "jsx?"
-}]
+"loaders": {
+  "style": {
+    "test": "sass",
+    "loaders": ["sass"]
+  },
+  "javascript": {
+    "test": "jsx?"
+  }
+}
 ```
 
 
