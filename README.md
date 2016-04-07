@@ -39,7 +39,7 @@ With this simple config you'll be able to use a full `common.js` enviroment on y
 
 ## Custom Configuration
 
-As we all know, ES6/7 is a thing, and pre/pos css processors are the stuff!
+As we all know, ES6/7 is a thing, and CSS pre/post processors are the stuff!
 
 You can easily add any babel presets or custom modules for your js/css builds.
 
