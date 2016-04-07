@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
-const program = require('commander');
-const webpack = require('webpack');
-const getWebpackConfig = require('./lib/webpack');
-const util = require('util');
+import program from 'commander';
+import webpack from 'webpack';
+import getWebpackConfig from './webpack';
+import util from 'util';
+import {getSagatPackage} from './config';
 const compiler = webpack(getWebpackConfig());
-const config = require('./lib/config');
-const pkg = config.getSagatPackage();
+const pkg = getSagatPackage();
 
 program.version(pkg.version)
   .option('-w --watch', 'Watch for file changes')
@@ -29,11 +29,6 @@ function watch() {
 }
 
 function parseCompiler(err, stats) {
-  if(err) {
-    throw new Error(err);
-  }
-
-  if(stats.hasErrors()) {
-    util.log(stats.toString({colors: true}));
-  }
+  if(err) throw new Error(err);
+  if(stats.hasErrors()) util.log(stats.toString({colors: true}));
 }

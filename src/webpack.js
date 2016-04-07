@@ -1,11 +1,11 @@
-const path = require('path');
-const config = require('./config');
-const loaders = require('./loaders');
-const plugins = require('./plugins');
+import path from 'path';
+import {getTargetDir, getSagatDir, getTargetConfig} from './config';
+import loaders from './loaders';
+import plugins from './plugins';
 
-const TARGET_DIR = config.getTargetDir();
-const SAGAT_DIR = config.getSagatDir();
-const TARGET_CONFIG = config.getTargetConfig();
+const TARGET_DIR = getTargetDir();
+const SAGAT_DIR = getSagatDir();
+const TARGET_CONFIG = getTargetConfig();
 
 function getEntry() {
   return [
@@ -36,7 +36,7 @@ function getPlugins() {
   return plugins;
 }
 
-module.exports = function getWebpackConfig() {
+export default function getWebpackConfig() {
   return {
     entry: getEntry(),
     output: getOutput(),
